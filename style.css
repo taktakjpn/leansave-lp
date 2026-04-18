@@ -104,17 +104,15 @@ nav .inner {
   gap: 8px;
 }
 .nav-logo-img {
-  width: auto;
   height: 32px;
-  max-width: none;
+  width: 27px;
   object-fit: contain;
   flex-shrink: 0;
 }
 .nav-logo:hover { opacity: 1; }
 .footer-logo-img {
-  width: auto;
   height: 36px;
-  max-width: none;
+  width: 31px;
   object-fit: contain;
   display: inline-block;
   margin-bottom: 8px;
