@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | LeanSave</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a href="index.html" class="nav-logo">LeanSave</a>
+    <a href="index.html" class="nav-back">← トップへ</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>お問い合わせ</h1>
+  <p>ご質問・ご意見・バグ報告をお気軽にどうぞ</p>
+</div>
+
+<div class="page-content">
+  <p class="contact-lead">
+    通常2〜3営業日以内にご返信します。緊急のご要件はTwitter
+    <a href="https://twitter.com/nutritrack_jp" target="_blank" rel="noopener">@nutritrack_jp</a>
+    へDMください。
+  </p>
+
+  <div class="contact-form">
+    <form id="contact-form" onsubmit="handleSubmit(event)">
+
+      <div class="form-group">
+        <label for="name">お名前<span class="required">*</span></label>
+        <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">メールアドレス<span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="category">お問い合わせ種別<span class="required">*</span></label>
+        <select id="category" name="category" required>
+          <option value="" disabled selected>選択してください</option>
+          <option value="bug">バグ報告・不具合</option>
+          <option value="feature">機能要望・改善提案</option>
+          <option value="privacy">プライバシー・データについて</option>
+          <option value="press">取材・プレス関連</option>
+          <option value="other">その他</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">件名</label>
+        <input type="text" id="subject" name="subject" placeholder="例：ホーム画面が表示されない">
+      </div>
+
+      <div class="form-group">
+        <label for="message">お問い合わせ内容<span class="required">*</span></label>
+        <textarea id="message" name="message" placeholder="できるだけ詳しく教えていただけると、より早く対応できます。&#10;&#10;バグ報告の場合：&#10;・発生した状況（何をしていたか）&#10;・iOSのバージョン&#10;・アプリのバージョン" required></textarea>
+      </div>
+
+      <div class="form-privacy">
+        <input type="checkbox" id="privacy-agree" required>
+        <label for="privacy-agree">
+          <a href="privacy.html">プライバシーポリシー</a>に同意する
+        </label>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn-primary-full">送信する</button>
+      </div>
+
+    </form>
+
+    <div id="success-message" class="success-panel" role="status" aria-live="polite">
+      <div class="success-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+      </div>
+      <h3>送信完了しました</h3>
+      <p>お問い合わせありがとうございます。<br>2〜3営業日以内にご返信します。</p>
+      <button onclick="resetForm()" class="btn-outline">新しいお問い合わせ</button>
+    </div>
+  </div>
+
+  <div class="faq-panel">
+    <h3>よくあるご質問</h3>
+    <div class="faq-item">
+      <p class="q">Q. 写真データはどこに保存されますか？</p>
+      <p class="a">A. 写真はAI解析のみに使用され、サーバーには保存されません。</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">Q. データのバックアップはできますか？</p>
+      <p class="a">A. 記録データはデバイス内に保存されます。詳細はお問い合わせください。</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">LeanSave</div>
+  <div class="footer-links">
+    <a href="index.html">トップ</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+  <div class="footer-copy">© 2026 LeanSave. All rights reserved.</div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('contact-form').style.display = 'none';
+  document.getElementById('success-message').style.display = 'block';
+  window.scrollTo({ top: document.querySelector('.contact-form').offsetTop - 80, behavior: 'smooth' });
+}
+
+function resetForm() {
+  document.getElementById('contact-form').reset();
+  document.getElementById('contact-form').style.display = 'block';
+  document.getElementById('success-message').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
