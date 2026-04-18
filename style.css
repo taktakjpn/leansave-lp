@@ -104,8 +104,8 @@ nav .inner {
   gap: 8px;
 }
 .nav-logo-img {
-  height: 32px;
-  width: 27px;
+  height: 40px;
+  width: 34px;
   object-fit: contain;
   flex-shrink: 0;
 }
