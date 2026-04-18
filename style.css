@@ -1009,6 +1009,9 @@ nav .inner {
 .screen-goal .goal-weights {
   margin-top: 88px;
 }
+.screen-goal .goal-cal {
+  margin-top: 12px;
+}
 .weight-cell {
   flex: 1;
   background: var(--surface);
