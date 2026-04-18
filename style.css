@@ -1733,7 +1733,7 @@ footer {
     right: -6px;
   }
   .screen-goal .goal-ring::before { inset: 5px; }
-  .screen-goal .goal-weights { margin-top: 28px; }
+  .screen-goal .goal-weights { margin-top: 36px; }
   .screen-goal .goal-cal { margin-top: 6px; }
   .goal-weights { gap: 3px; margin-bottom: 6px; }
   .weight-cell { padding: 4px 2px; border-radius: 6px; }
