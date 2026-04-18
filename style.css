@@ -111,11 +111,10 @@ nav .inner {
 }
 .nav-logo:hover { opacity: 1; }
 .footer-logo-img {
-  height: 36px;
-  width: 31px;
+  height: 32px;
+  width: 27px;
   object-fit: contain;
-  display: inline-block;
-  margin-bottom: 8px;
+  flex-shrink: 0;
 }
 .nav-back {
   font-size: 13px;
@@ -1284,6 +1283,10 @@ footer {
   color: #fff;
   margin-bottom: 24px;
   letter-spacing: -0.025em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 .footer-links {
   display: flex; gap: 36px;
