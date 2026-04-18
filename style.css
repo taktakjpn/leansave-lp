@@ -1721,25 +1721,30 @@ footer {
   .goal-ring-num span { font-size: 8px; }
   .goal-ring-sub { font-size: 6.5px; }
   /* 飛び出し調整 */
-  .screen-goal .goal-ring {
-    width: 64px;
-    height: 64px;
-    top: -18px;
-    right: -8px;
+  .screen-goal {
+    padding-left: 8px;
+    padding-right: 8px;
+    overflow: visible;
   }
-  .screen-goal .goal-ring::before { inset: 6px; }
-  .screen-goal .goal-weights { margin-top: 54px; }
-  .goal-weights { gap: 4px; margin-bottom: 8px; }
-  .weight-cell { padding: 5px 2px; border-radius: 7px; }
-  .weight-label { font-size: 6px; }
-  .weight-value { font-size: 11px; }
-  .weight-value span { font-size: 7px; }
-  .weight-arrow { font-size: 10px; }
-  .goal-cal { padding: 6px; border-radius: 7px; }
-  .goal-cal-head { font-size: 7px; margin-bottom: 4px; }
-  .goal-cal-num { font-size: 9px; }
-  .goal-cal-num .u { font-size: 7px; }
-  .goal-cal-bar { height: 4px; }
+  .screen-goal .goal-ring {
+    width: 60px;
+    height: 60px;
+    top: -16px;
+    right: -6px;
+  }
+  .screen-goal .goal-ring::before { inset: 5px; }
+  .screen-goal .goal-weights { margin-top: 40px; }
+  .goal-weights { gap: 3px; margin-bottom: 6px; }
+  .weight-cell { padding: 4px 2px; border-radius: 6px; }
+  .weight-label { font-size: 5.5px; }
+  .weight-value { font-size: 9px; }
+  .weight-value span { font-size: 6px; }
+  .weight-arrow { font-size: 8px; }
+  .goal-cal { padding: 5px; border-radius: 6px; }
+  .goal-cal-head { font-size: 6.5px; margin-bottom: 3px; }
+  .goal-cal-num { font-size: 8px; }
+  .goal-cal-num .u { font-size: 6.5px; }
+  .goal-cal-bar { height: 3px; }
 
   .mockup-label { font-size: 9.5px; margin-top: 14px; }
 
