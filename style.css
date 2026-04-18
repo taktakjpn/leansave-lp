@@ -1731,6 +1731,9 @@ footer {
     height: 60px;
     top: -16px;
     right: -6px;
+    box-shadow:
+      0 8px 20px -4px rgba(255, 107, 53, 0.5),
+      0 4px 10px rgba(10, 10, 10, 0.14);
   }
   .screen-goal .goal-ring::before { inset: 5px; }
   .screen-goal .goal-weights { margin-top: 36px; }
