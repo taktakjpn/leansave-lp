@@ -106,15 +106,18 @@ nav .inner {
 .nav-logo-img {
   width: auto;
   height: 32px;
+  max-width: none;
   object-fit: contain;
+  flex-shrink: 0;
 }
 .nav-logo:hover { opacity: 1; }
 .footer-logo-img {
   width: auto;
   height: 36px;
+  max-width: none;
   object-fit: contain;
-  display: block;
-  margin: 0 auto 8px;
+  display: inline-block;
+  margin-bottom: 8px;
 }
 .nav-back {
   font-size: 13px;
