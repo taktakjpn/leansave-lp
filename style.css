@@ -1748,9 +1748,9 @@ footer {
   .weight-value span { font-size: 6px; }
   .weight-arrow { font-size: 8px; }
   .goal-cal { padding: 5px; border-radius: 6px; }
-  .goal-cal-head { font-size: 6.5px; margin-bottom: 3px; }
-  .goal-cal-num { font-size: 8px; }
-  .goal-cal-num .u { font-size: 6.5px; }
+  .goal-cal-head { font-size: 6px; margin-bottom: 3px; white-space: nowrap; }
+  .goal-cal-num { font-size: 7.5px; white-space: nowrap; }
+  .goal-cal-num .u { font-size: 6px; }
   .goal-cal-bar { height: 3px; }
 
   .mockup-label { font-size: 9.5px; margin-top: 14px; }
