@@ -172,7 +172,7 @@ nav .inner {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(44px, 8vw, 80px);
+  font-size: clamp(40px, 7.2vw, 72px);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.045em;
@@ -187,6 +187,13 @@ nav .inner {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+.accent-gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  display: inline;
 }
 
 .hero-sub {
