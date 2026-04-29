@@ -28,14 +28,14 @@
 
   <h2>事業者情報</h2>
   <p>
-    個人情報取扱事業者：株式会社LeanSave（または開発者氏名）<br>
-    住所：〒000-0000 東京都〇〇区〇〇x-x-x<br>
-    メール：<a href="contact.html">お問い合わせフォーム</a>
+    LeanSave 開発チーム<br>
+    お問い合わせ：<a href="mailto:support@leansave.app">support@leansave.app</a>
   </p>
 
   <h2>1. 収集する情報</h2>
   <p>本アプリは以下の情報を収集することがあります：</p>
   <ul>
+    <li><strong>アカウント情報</strong>：Apple サインイン / Google サインインを通じて取得するメールアドレスと表示名。アカウント識別・ログイン処理にのみ使用します。</li>
     <li><strong>食事写真</strong>：AIによる栄養・食費解析のためにのみ使用します。写真データは解析処理後、当社サーバーには保存されません。</li>
     <li><strong>食事記録データ</strong>：食事名、カロリー、PFC（タンパク質・脂質・炭水化物）、食費、記録日時</li>
     <li><strong>体重記録</strong>：ユーザーが任意で入力した体重データ</li>
@@ -45,7 +45,7 @@
 
   <h2>2. 収集しない情報</h2>
   <ul>
-    <li>氏名・住所・電話番号・メールアドレスなどの直接的に個人を特定できる連絡先情報</li>
+    <li>住所・電話番号などの連絡先情報（メールアドレスは Apple/Google サインインで取得しますが、住所・電話番号は収集しません）</li>
     <li>位置情報</li>
     <li>連絡先・カレンダーなどのデバイス情報</li>
     <li>決済情報（App Store経由で処理されます）</li>
@@ -77,7 +77,7 @@
   <h2>5. データの保存・管理</h2>
   <ul>
     <li>食事記録・体重記録などのデータは主にデバイス内（ローカル）に保存されます</li>
-    <li>クラウド同期機能を使用する場合、データは暗号化された状態で送信・保存されます。クラウド上のデータはアカウント削除または削除リクエストに応じて速やかに削除されます</li>
+    <li>アカウント情報（メールアドレス・表示名・身体プロフィール）は Supabase（クラウド）に暗号化された状態で保存されます。クラウド上のデータはアカウント削除または削除リクエストに応じて、適切に削除します</li>
     <li>アプリを削除した場合、デバイス内のデータもすべて削除されます</li>
     <li>収集したデータは、利用目的の達成に必要な期間のみ保持します</li>
   </ul>
@@ -112,7 +112,7 @@
     <li><strong>利用の停止・消去</strong></li>
     <li><strong>第三者提供の停止</strong></li>
   </ul>
-  <p>ご請求は<a href="contact.html">お問い合わせフォーム</a>よりご連絡ください。本人確認の上、個人情報保護法の定めに従い対応いたします。</p>
+  <p>ご請求は <a href="mailto:support@leansave.app">support@leansave.app</a> までご連絡ください。本人確認の上、個人情報保護法の定めに従い対応いたします。</p>
 
   <h2>10. 未成年者の利用</h2>
   <p>本アプリは13歳以上の方を対象としています。13歳未満の方はご利用いただけません。13〜18歳未満の方のご利用は保護者の同意のもとでお願いします。</p>
@@ -122,10 +122,7 @@
 
   <h2>12. お問い合わせ</h2>
   <p>プライバシーに関するご質問・ご要望は以下からお問い合わせください：</p>
-  <ul>
-    <li><a href="contact.html">お問い合わせフォーム</a></li>
-    <li>Twitter: <a href="https://twitter.com/nutritrack_jp" target="_blank" rel="noopener">@nutritrack_jp</a></li>
-  </ul>
+  <p><a href="mailto:support@leansave.app">support@leansave.app</a></p>
 </div>
 
 <footer>
@@ -133,7 +130,7 @@
   <div class="footer-links">
     <a href="index.html">トップ</a>
     <a href="privacy.html">プライバシーポリシー</a>
-    <a href="contact.html">お問い合わせ</a>
+    <a href="support.html">お問い合わせ</a>
   </div>
   <div class="footer-copy">© 2026 LeanSave. All rights reserved.</div>
 </footer>
