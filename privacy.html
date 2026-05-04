@@ -1,139 +1,196 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プライバシーポリシー | LeanSave</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.png">
-</head>
-<body>
-
-<nav>
-  <div class="inner">
-    <a href="index.html" class="nav-logo"><img src="logo.png" alt="LeanSave" class="nav-logo-img">LeanSave</a>
-    <a href="index.html" class="nav-back">← トップへ</a>
-  </div>
-</nav>
-
-<div class="page-header">
-  <h1>プライバシーポリシー</h1>
-  <p>個人情報の取り扱いについて</p>
-</div>
-
-<div class="page-content">
-  <p class="updated">最終更新日：2026年4月14日</p>
-
-  <p>LeanSave（以下「本アプリ」）は、ユーザーのプライバシーを最優先に考えています。本プライバシーポリシーは、本アプリが収集する情報、その利用方法、および保護措置について説明します。</p>
-
-  <h2>事業者情報</h2>
-  <p>
-    LeanSave 開発チーム<br>
-    お問い合わせ：<a href="mailto:support@leansave.app">support@leansave.app</a>
-  </p>
-
-  <h2>1. 収集する情報</h2>
-  <p>本アプリは以下の情報を収集することがあります：</p>
-  <ul>
-    <li><strong>アカウント情報</strong>：Apple サインイン / Google サインインを通じて取得するメールアドレスと表示名。アカウント識別・ログイン処理にのみ使用します。</li>
-    <li><strong>食事写真</strong>：AIによる栄養・食費解析のためにのみ使用します。写真データは解析処理後、当社サーバーには保存されません。</li>
-    <li><strong>食事記録データ</strong>：食事名、カロリー、PFC（タンパク質・脂質・炭水化物）、食費、記録日時</li>
-    <li><strong>体重記録</strong>：ユーザーが任意で入力した体重データ</li>
-    <li><strong>ユーザープロフィール</strong>：年齢、性別、身長、目標体重、活動量（栄養目標の計算に使用）</li>
-    <li><strong>アプリ利用データ</strong>：クラッシュレポート、アプリのパフォーマンスデータ（匿名化されたもの）</li>
-  </ul>
-
-  <h2>2. 収集しない情報</h2>
-  <ul>
-    <li>住所・電話番号などの連絡先情報（メールアドレスは Apple/Google サインインで取得しますが、住所・電話番号は収集しません）</li>
-    <li>位置情報</li>
-    <li>連絡先・カレンダーなどのデバイス情報</li>
-    <li>決済情報（App Store経由で処理されます）</li>
-    <li>クロスサイトトラッキング・広告目的でのデータ収集は一切行いません</li>
-  </ul>
-
-  <h2>3. 情報の利用目的</h2>
-  <p>収集した情報は以下の目的に使用します：</p>
-  <ul>
-    <li>AIによる食事解析（カロリー・PFC・食費の自動計算）※食事写真を使用</li>
-    <li>栄養目標の計算・表示 ※ユーザープロフィールを使用</li>
-    <li>月次レポートの生成 ※食事記録・体重記録を使用</li>
-    <li>アプリの改善・バグ修正 ※匿名化されたアプリ利用データのみを使用</li>
-    <li>カスタマーサポートへの対応 ※ユーザーから提供いただいた情報を使用</li>
-    <li>AIモデルの精度向上・新機能開発 ※匿名化・統計処理した食事記録データを使用（個人を特定できない形式に加工したデータのみ）</li>
-  </ul>
-
-  <h2>4. 写真データの取り扱い</h2>
-  <p>本アプリにおける写真データの取り扱いは以下の通りです：</p>
-  <ul>
-    <li>撮影した写真はAI解析（栄養・食費の推定）のみに使用します</li>
-    <li>写真はAI解析処理のためAnthropic社のAPIサーバーに送信されますが、当社サーバーには保存されません。解析完了後、写真データは破棄されます</li>
-    <li>写真を第三者に提供・販売することは一切ありません</li>
-    <li>広告目的での写真利用は行いません</li>
-    <li>フォトライブラリへのアクセスは、ユーザーが明示的に許可した場合のみ行います</li>
-    <li>写真に個人情報（顔・氏名等）が映り込む可能性がある場合は、撮影前にご確認ください</li>
-  </ul>
-
-  <h2>5. データの保存・管理</h2>
-  <ul>
-    <li>食事記録・体重記録などのデータは主にデバイス内（ローカル）に保存されます</li>
-    <li>アカウント情報（メールアドレス・表示名・身体プロフィール）は Supabase（クラウド）に暗号化された状態で保存されます。クラウド上のデータはアカウント削除または削除リクエストに応じて、適切に削除します</li>
-    <li>アプリを削除した場合、デバイス内のデータもすべて削除されます</li>
-    <li>収集したデータは、利用目的の達成に必要な期間のみ保持します</li>
-  </ul>
-
-  <h2>6. 業務委託先への情報提供</h2>
-  <p>以下の業務委託先にデータを提供する場合があります。委託先はデータをサービス提供以外の目的に使用することを禁止しています：</p>
-  <ul>
-    <li><strong>Anthropic社（Claude API）</strong>：食事写真のAI解析処理のために使用します。送信されるデータは食事写真のみです。Anthropic社のデータ取り扱いについては<a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a>をご参照ください。</li>
-  </ul>
-
-  <h2>7. 第三者への提供</h2>
-  <p>上記の業務委託を除き、以下の場合を除いてユーザーの情報を第三者に提供することはありません：</p>
-  <ul>
-    <li>ユーザーの明示的な同意がある場合</li>
-    <li>法令に基づく開示要求がある場合</li>
-    <li>生命・財産の保護のために必要な場合</li>
-  </ul>
-
-  <h2>8. セキュリティ</h2>
-  <p>ユーザーデータの保護のため、以下のセキュリティ対策を実施しています：</p>
-  <ul>
-    <li>通信のSSL/TLS暗号化</li>
-    <li>クラウドデータの暗号化保存</li>
-  </ul>
-
-  <h2>9. 個人情報に関するご請求</h2>
-  <p>ユーザーは、当社が保有する個人情報について、以下の請求を行うことができます：</p>
-  <ul>
-    <li><strong>利用目的の通知</strong></li>
-    <li><strong>開示</strong></li>
-    <li><strong>内容の訂正・追加・削除</strong></li>
-    <li><strong>利用の停止・消去</strong></li>
-    <li><strong>第三者提供の停止</strong></li>
-  </ul>
-  <p>ご請求は <a href="mailto:support@leansave.app">support@leansave.app</a> までご連絡ください。本人確認の上、個人情報保護法の定めに従い対応いたします。</p>
-
-  <h2>10. 未成年者の利用</h2>
-  <p>本アプリは13歳以上の方を対象としています。13歳未満の方はご利用いただけません。13〜18歳未満の方のご利用は保護者の同意のもとでお願いします。</p>
-
-  <h2>11. プライバシーポリシーの変更</h2>
-  <p>本ポリシーは必要に応じて改定されることがあります。変更後のポリシーは本ページに掲載した時点で効力を生じるものとします。</p>
-
-  <h2>12. お問い合わせ</h2>
-  <p>プライバシーに関するご質問・ご要望は以下からお問い合わせください：</p>
-  <p><a href="mailto:support@leansave.app">support@leansave.app</a></p>
-</div>
-
-<footer>
-  <div class="footer-logo">LeanSave</div>
-  <div class="footer-links">
-    <a href="index.html">トップ</a>
-    <a href="privacy.html">プライバシーポリシー</a>
-    <a href="support.html">お問い合わせ</a>
-  </div>
-  <div class="footer-copy">© 2026 LeanSave. All rights reserved.</div>
-</footer>
-
-</body>
-</html>
+<!DOCTYPE html>                                                                      
+  <html lang="ja">                                                                     
+  <head>                                                                               
+    <meta charset="UTF-8">                                                             
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">             
+    <title>プライバシーポリシー | LeanSave</title>                          
+    <link rel="stylesheet" href="style.css">                                
+    <link rel="icon" type="image/png" href="favicon.png">                   
+  </head>                                                                              
+  <body>                                                                    
+                                                                                       
+  <nav>                                                                            
+    <div class="inner">                                                     
+      <a href="index.html" class="nav-logo"><img src="logo.png" alt="LeanSave"         
+  class="nav-logo-img">LeanSave</a>           
+      <a href="index.html" class="nav-back">← トップへ</a>                             
+    </div>                                                                         
+  </nav>                                                                               
+                                                                            
+  <div class="page-header">                                                            
+    <h1>プライバシーポリシー</h1>                                                  
+    <p>個人情報の取り扱いについて</p>                                                  
+  </div>                                                                           
+                                                                            
+  <div class="page-content">                       
+    <p class="updated">最終更新日:2026年5月5日</p>                                     
+                                                                            
+    <p>LeanSave(以下「本アプリ」)は、ユーザーのプライバシーを最優先に考えています。本プ
+  ライバシーポリシーは、本アプリが収集する情報、その利用方法、および保護措置について説
+  明します。</p>                                                                       
+                                                                                   
+    <h2>事業者情報</h2>                                                     
+    <p>                                                                     
+      LeanSave 開発チーム<br>                                                          
+      お問い合わせ:<a href="mailto:support@leansave.app">support@leansave.app</a>
+    </p>                                                                               
+                                                                                   
+    <h2>1. 収集する情報</h2>                                                           
+    <p>本アプリは以下の情報を収集することがあります:</p>                               
+    <ul>                                                                               
+      <li><strong>アカウント情報</strong>:Apple サインイン / Google サインインを通じて 
+  取得するメールアドレスと表示名。アカウント識別・ログイン処理にのみ使用します。</li>
+      <li><strong>食事写真</strong>:AIによる栄養・食費解析のためにのみ使用します。写真
+  データは解析処理後、当社サーバーには保存されません。</li>
+      <li><strong>食事記録データ</strong>:食事名、カロリー、PFC(タンパク質・脂質・炭水
+  化物)、食費、記録日時</li>                                                           
+      <li><strong>体重記録</strong>:ユーザーが任意で入力した体重データ</li> 
+      <li><strong>ユーザープロフィール</strong>:年齢、性別、身長、目標体重、活動量(栄養
+  目標の計算に使用)</li>                                                               
+      <li><strong>アプリ利用データ</strong>:クラッシュレポート、アプリのパフォーマンス
+  データ(匿名化されたもの)</li>                                                        
+    </ul>                                                                          
+                                                                                       
+    <h2>2. 収集しない情報</h2>                                              
+    <ul>                                                                               
+      <li>住所・電話番号などの連絡先情報(メールアドレスは Apple/Google             
+  サインインで取得しますが、住所・電話番号は収集しません)</li>                         
+      <li>位置情報</li>                                                            
+      <li>連絡先・カレンダーなどのデバイス情報</li>                                    
+      <li>決済情報(App Store経由で処理されます)</li>                                   
+      <li>クロスサイトトラッキング・広告目的でのデータ収集は一切行いません</li>        
+    </ul>                                                                              
+                                                                                   
+    <h2>3. 情報の利用目的</h2>                                                         
+    <p>収集した情報は以下の目的に使用します:</p>                                       
+    <ul>                                                                    
+      <li>AIによる食事解析(カロリー・PFC・食費の自動計算) ※食事写真を使用</li>         
+      <li>栄養目標の計算・表示 ※ユーザープロフィールを使用</li>                        
+      <li>月次レポートの生成 ※食事記録・体重記録を使用</li>                 
+      <li>アプリの改善・バグ修正 ※匿名化されたアプリ利用データのみを使用</li>          
+      <li>カスタマーサポートへの対応 ※ユーザーから提供いただいた情報を使用</li>        
+      <li>AIモデルの精度向上・新機能開発 ※匿名化・統計処理した食事記録データを使用(個人
+  を特定できない形式に加工したデータのみ)</li>                                         
+    </ul>                                                                              
+                                                                                       
+    <h2>4. 写真データの取り扱い</h2>                                               
+    <p>本アプリにおける写真データの取り扱いは以下の通りです:</p>                       
+    <ul>                                                                    
+      <li>撮影した写真はAI解析(栄養・食費の推定)のみに使用します</li>                  
+      <li>写真はAI解析処理のためAnthropic社のAPIサーバーに送信されますが、当社サーバー 
+  には保存されません。解析完了後、写真データは破棄されます</li>                        
+      <li>写真を第三者に提供・販売することは一切ありません</li>                        
+      <li>広告目的での写真利用は行いません</li>                                        
+                                                                                       
+  <li>フォトライブラリへのアクセスは、ユーザーが明示的に許可した場合のみ行います</li>  
+      <li>写真に個人情報(顔・氏名等)が映り込む可能性がある場合は、撮影前にご確認くださ 
+  い</li>                                                                              
+    </ul>                                                                   
+                                                                                       
+    <h2>5. データの保存・管理</h2>                                                 
+    <ul>                                                                               
+      <li><strong>アカウント情報</strong>(Apple サインイン / Google                    
+  サインイン経由のメールアドレス / 表示名 / ユーザー                                   
+  ID):アカウント削除まで保持。Supabase(クラウド)に暗号化された状態で保存されます</li>  
+      <li><strong>食事記録 / 体重記録 / 目標設定</strong>:端末内(iOS UserDefaults)に保 
+  存、アプリ削除で消去。<em>将来的にはクラウド同期(Supabase)も検討</em>しています</li> 
+      <li><strong>食事写真</strong>:AI 解析リクエスト処理中のみ Anthropic API          
+  に送信、解析完了後即破棄、当社サーバーに永続保存はありません</li>                    
+      <li><strong>ログ / エラー情報</strong>:Cloudflare 社および Anthropic         
+  社のデータ保存方針に準拠(各社方針に基づき短期間で削除)</li>                          
+      <li><strong>サブスクリプション情報</strong>:契約期間中および契約終了後、税務 /   
+  会計法令に基づく必要期間(例:7 年)の保存があり得ます</li>                  
+      <li>クラウド上のデータはアカウント削除または削除リクエストに応じて、適切に削除し 
+  ます</li>                                                                            
+    </ul>                                                                   
+                                                                                       
+    <h2>6. 業務委託先への情報提供</h2>                                                 
+    <p>以下の業務委託先にデータを提供する場合があります。委託先はデータをサービス提供以
+  外の目的に使用することを禁止しています:</p>                                          
+    <ul>                                                                           
+      <li><strong>Anthropic社(Claude API)</strong>:食事写真のAI解析処理のために使用しま
+  す。送信されるデータは食事写真のみです。Anthropic社のデータ取り扱いについては<a  
+  href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic    
+  Privacy Policy</a>をご参照ください。</li>                                        
+      <li><strong>Cloudflare 社(Cloudflare Worker)</strong>:AI 解析リクエストの中継    
+  proxy として使用します。Cloudflare Worker                                        
+  は通信の中継のみ行い、食事写真および解析結果を永続的に保存しません。Cloudflare       
+  社のデータ取り扱いについては<a href="https://www.cloudflare.com/privacypolicy/"      
+  target="_blank" rel="noopener">Cloudflare Privacy Policy</a> をご参照ください。</li>
+      <li><strong>Supabase 社(Backend as a                                             
+  Service)</strong>:アカウント情報の保存・認証処理のために使用します。Supabase     
+  社のデータ取り扱いについては<a href="https://supabase.com/privacy" target="_blank"   
+  rel="noopener">Supabase Privacy Policy</a> をご参照ください。</li>                   
+    </ul>                                                                   
+                                                                                       
+    <h2>7. 第三者への提供</h2>                                                     
+    <p>上記の業務委託を除き、以下の場合を除いてユーザーの情報を第三者に提供することはあ
+  りません:</p>           
+    <ul>                                                                               
+      <li>ユーザーの明示的な同意がある場合</li>                                    
+      <li>法令に基づく開示要求がある場合</li>                               
+      <li>生命・財産の保護のために必要な場合</li>                                      
+    </ul>                                                                   
+                                                                                       
+    <h2>8. セキュリティ</h2>                                                       
+    <p>ユーザーデータの保護のため、以下のセキュリティ対策を実施しています:</p>
+    <ul>                                                                    
+      <li>通信のSSL/TLS暗号化</li>                                          
+      <li>クラウドデータの暗号化保存</li>                                              
+    </ul>                                                                   
+                                                                                       
+    <h2>9. 個人情報に関するご請求</h2>                                                 
+    <p>ユーザーは、当社が保有する個人情報について、以下の請求を行うことができます:</p> 
+    <ul>                                                                               
+      <li><strong>利用目的の通知</strong></li>                                         
+      <li><strong>開示</strong></li>                                               
+      <li><strong>内容の訂正・追加・削除</strong></li>                                 
+      <li><strong>利用の停止・消去</strong></li>                                       
+      <li><strong>第三者提供の停止</strong></li>                            
+    </ul>                                                                              
+    <p>ご請求は <a href="mailto:support@leansave.app">support@leansave.app</a>     
+  までご連絡ください。本人確認の上、個人情報保護法の定めに従い対応いたします。</p>     
+                                                                                       
+    <h2>10. 未成年者の利用</h2>                                             
+    <p>未成年者が本アプリを利用する場合は、親権者その他法定代理人の同意を得たうえで利用
+  してください。</p>                                                               
+                                                                                       
+    <h2>11. LeanSave Pro(有料サブスクリプション)</h2>                              
+    <p>LeanSave Pro(有料サブスクリプション)について:</p>                               
+    <ul>                                                                               
+      <li><strong>決済処理</strong>:Apple App                                          
+  Store(StoreKit)経由、当社は決済情報(クレジットカード番号等)を受け取りません</li>     
+      <li><strong>契約管理</strong>:Apple ID に紐づき、解約は iOS の「設定 &gt; Apple  
+  ID &gt; サブスクリプション」からユーザー自身で行います</li>                      
+      <li><strong>サブスクリプション状態</strong>:アプリ起動時に Apple StoreKit        
+  から取得し、Pro 機能の利用可否判定に使用します</li>                              
+      <li><em>将来的に、サブスクリプション管理 / サポート対応の改善のため、サブスクリプ
+  ション状態を当社サーバー(Supabase)に保存する場合があります</em></li>      
+      <li>価格 / プラン詳細はアプリ内 Paywall および App Store Connect                 
+  に明記されています</li>                                                          
+    </ul>                                                                              
+                                                                                       
+    <h2>12. プライバシーポリシーの変更</h2>                                            
+    <p>本ポリシーは必要に応じて改定されることがあります。変更後のポリシーは本ページに掲
+  載した時点で効力を生じるものとします。</p>                                           
+                                                                                   
+    <h2>13. お問い合わせ</h2>                                                          
+    <p>プライバシーに関するご質問・ご要望は以下からお問い合わせください:</p>       
+    <p><a href="mailto:support@leansave.app">support@leansave.app</a></p>              
+  </div>                                                                           
+                                                                                       
+  <footer>                                                                         
+    <div class="footer-logo"><img src="logo.png" alt="LeanSave"                        
+  class="footer-logo-img">LeanSave</div>                                           
+    <div class="footer-links">                                                         
+      <a href="index.html">トップ</a>                                                  
+      <a href="terms.html">利用規約</a>                                     
+      <a href="privacy.html">プライバシーポリシー</a>                                  
+      <a href="legal.html">特定商取引法に基づく表記</a>                            
+      <a href="support.html">お問い合わせ</a>                                          
+    </div>                                                                             
+    <div class="footer-copy">© 2026 LeanSave. All rights reserved.</div>               
+  </footer>                                                                            
+                                                                                   
+  </body>                                                                              
+  </html>     
