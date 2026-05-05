@@ -1371,7 +1371,18 @@ footer {
   border-color: var(--accent);
   opacity: 1;
 }
-.page-content ul { padding-left: 22px; }
+.page-content ul,
+.page-content ol {
+  padding-left: 28px;
+  margin-left: 0;
+}
+.page-content ol ul,
+.page-content ul ol,
+.page-content ol ol,
+.page-content ul ul {
+  padding-left: 22px;
+  margin-top: 8px;
+}
 .page-content strong { color: var(--text-primary); font-weight: 700; }
 .page-content .updated {
   font-size: 13px;
