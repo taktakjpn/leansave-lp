@@ -1829,8 +1829,5 @@ footer {
   display: inline-block;
 }
 
-@media (prefers-color-scheme: dark) {
-  .leansave-logo {
-    color: var(--ls-paper);
-  }
-}
+/* Note: LP は常に light background 想定なので dark mode media query は適用しない
+   (dark bg context は iOS App Pro UI で個別 color 指定) */
