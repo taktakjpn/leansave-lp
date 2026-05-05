@@ -1829,5 +1829,8 @@ footer {
   display: inline-block;
 }
 
-/* Note: LP は常に light background 想定なので dark mode media query は適用しない
-   (dark bg context は iOS App Pro UI で個別 color 指定) */
+/* footer は dark background なので wordmark 色を paper (薄ベージュ) に override */
+footer .leansave-logo,
+.footer-logo .leansave-logo {
+  color: var(--ls-paper);
+}
