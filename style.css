@@ -1801,3 +1801,36 @@ footer {
   .goal-ring-num { font-size: 13px; }
   .weight-value { font-size: 10px; }
 }
+
+/* ==========================================================================
+   LeanSave wordmark (LEANSAVE 文字ロゴ統一スタイル)
+   nav / footer / その他で <span class="leansave-logo">LEANSAVE</span> として使用
+   font-size は親 element から inherit、context に合わせた sizing を維持
+   ========================================================================== */
+
+:root {
+  --ls-font: 'Inter', -apple-system, system-ui, sans-serif;
+  --ls-weight: 450;
+  --ls-tracking: 0.22em;
+  --ls-leading: 0.90;
+  --ls-ink: #0a0a0a;
+  --ls-paper: #fafaf7;
+}
+
+.leansave-logo {
+  font-family: var(--ls-font);
+  font-weight: var(--ls-weight);
+  letter-spacing: var(--ls-tracking);
+  line-height: var(--ls-leading);
+  color: var(--ls-ink);
+  text-transform: uppercase;
+  padding-left: var(--ls-tracking);
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .leansave-logo {
+    color: var(--ls-paper);
+  }
+}
