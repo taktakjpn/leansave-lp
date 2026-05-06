@@ -53,7 +53,13 @@
           </div>
           <div class="mockup-screen screen-budget">
             <div class="screen-header">
-              <div class="screen-title">今月の食費</div>
+              <div class="screen-title-row">
+                <svg class="wallet-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 7.5C3 6.12 4.12 5 5.5 5h13A2.5 2.5 0 0 1 21 7.5v9A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-9Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M3 10h18M16 13.5h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <div class="screen-title">今月の食費</div>
+              </div>
               <div class="screen-chip chip-ok">予算内</div>
             </div>
             <div class="budget-hero">
@@ -72,10 +78,15 @@
                 <div class="meta-value">18日</div>
                 <div class="meta-label">残り日数</div>
               </div>
+              <div class="meta-cell">
+                <div class="meta-value">¥978</div>
+                <div class="meta-label">1日あたり</div>
+              </div>
             </div>
-            <div class="budget-day">
-              <span class="budget-day-label">1日あたり</span>
-              <span class="budget-day-value">¥978</span>
+            <div class="budget-trend">
+              <div class="trend-row"><span class="trend-day">月</span><span class="trend-bar" style="--h:62%"></span><span class="trend-val">¥1,280</span></div>
+              <div class="trend-row"><span class="trend-day">火</span><span class="trend-bar" style="--h:38%"></span><span class="trend-val">¥820</span></div>
+              <div class="trend-row"><span class="trend-day">水</span><span class="trend-bar" style="--h:54%"></span><span class="trend-val">¥1,120</span></div>
             </div>
           </div>
         </div>
@@ -96,11 +107,6 @@
             </div>
             <div class="food-photo" aria-hidden="true">
               <div class="scan-line"></div>
-              <div class="scan-grid"></div>
-              <div class="scan-corner scan-corner-tl"></div>
-              <div class="scan-corner scan-corner-tr"></div>
-              <div class="scan-corner scan-corner-bl"></div>
-              <div class="scan-corner scan-corner-br"></div>
               <div class="food-photo-tag">¥780</div>
             </div>
             <div class="food-name">チキン定食</div>
@@ -109,22 +115,25 @@
               <span class="cal-num">642</span>
               <span class="cal-unit">kcal</span>
             </div>
-            <div class="pfc-bars">
-              <div class="pfc-header">栄養バランス</div>
-              <div class="pfc-row">
-                <span class="pfc-label">P</span>
-                <span class="pfc-track"><span class="pfc-fill pfc-p" style="width:72%"></span></span>
-                <span class="pfc-value">38g</span>
+            <div class="pfc-grid">
+              <div class="pfc-cell pfc-cell-p">
+                <span class="pfc-cell-label">P</span>
+                <div class="pfc-cell-ring" style="--p:72"></div>
+                <span class="pfc-cell-value">38<i>g</i></span>
               </div>
-              <div class="pfc-row">
-                <span class="pfc-label">F</span>
-                <span class="pfc-track"><span class="pfc-fill pfc-f" style="width:48%"></span></span>
-                <span class="pfc-value">18g</span>
+              <div class="pfc-cell pfc-cell-f">
+                <span class="pfc-cell-label">F</span>
+                <div class="pfc-cell-ring" style="--p:48"></div>
+                <span class="pfc-cell-value">18<i>g</i></span>
               </div>
-              <div class="pfc-row">
-                <span class="pfc-label">C</span>
-                <span class="pfc-track"><span class="pfc-fill pfc-c" style="width:82%"></span></span>
-                <span class="pfc-value">72g</span>
+              <div class="pfc-cell pfc-cell-c">
+                <span class="pfc-cell-label">C</span>
+                <div class="pfc-cell-ring" style="--p:82"></div>
+                <span class="pfc-cell-value">72<i>g</i></span>
+              </div>
+              <div class="pfc-cell pfc-cell-cost">
+                <span class="pfc-cell-label">食費</span>
+                <span class="pfc-cell-value">¥780</span>
               </div>
             </div>
           </div>
@@ -161,13 +170,26 @@
                 <div class="weight-value goal">62.0<span>kg</span></div>
               </div>
             </div>
-            <div class="goal-cal">
-              <div class="goal-cal-head">
-                <span>今日の摂取</span>
-                <span class="goal-cal-num">1,240<span class="u">/1,800</span></span>
+            <div class="weight-chart" aria-hidden="true">
+              <svg viewBox="0 0 100 32" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="wg" x1="0" x2="1"><stop offset="0" stop-color="#FF8C5A"/><stop offset="1" stop-color="#FF6B35"/></linearGradient>
+                  <linearGradient id="wgf" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FF6B35" stop-opacity="0.25"/><stop offset="1" stop-color="#FF6B35" stop-opacity="0"/></linearGradient>
+                </defs>
+                <path d="M0,18 L17,16 L33,17 L50,14 L67,12 L83,10 L100,8 L100,32 L0,32 Z" fill="url(#wgf)"/>
+                <path d="M0,18 L17,16 L33,17 L50,14 L67,12 L83,10 L100,8" fill="none" stroke="url(#wg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="chart-label">7日間の推移</span>
+            </div>
+            <div class="streak-row">
+              <div class="streak-cell">
+                <div class="streak-num">12<span>日</span></div>
+                <div class="streak-label">記録継続</div>
               </div>
-              <div class="goal-cal-bar">
-                <div class="goal-cal-fill" style="width:69%"></div>
+              <div class="streak-divider"></div>
+              <div class="streak-cell">
+                <div class="streak-num accent">4<span>日</span></div>
+                <div class="streak-label">目標達成</div>
               </div>
             </div>
           </div>

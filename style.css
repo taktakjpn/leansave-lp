@@ -13,6 +13,22 @@
   --accent-soft: #FFF3EC;
   --gradient: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%);
 
+  /* Tier 2 — glass / accent tint */
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --accent-tint-08: rgba(255, 107, 53, 0.08);
+
+  /* PFC colors — iOS app 整合 */
+  --pfc-p: #2563EB;
+  --pfc-p-tint: rgba(37, 99, 235, 0.12);
+  --pfc-p-bg: rgba(37, 99, 235, 0.06);
+  --pfc-f: #CA8A04;
+  --pfc-f-tint: rgba(202, 138, 4, 0.12);
+  --pfc-f-bg: rgba(202, 138, 4, 0.06);
+  --pfc-c: #16A34A;
+  --pfc-c-tint: rgba(22, 163, 74, 0.12);
+  --pfc-c-bg: rgba(22, 163, 74, 0.06);
+
   /* Neutrals — near-monochrome */
   --bg: #FFFFFF;
   --bg-soft: #FAFAFA;
@@ -621,29 +637,14 @@ nav .inner {
   border-radius: 0;
   border-top-left-radius: 26px;
   border-top-right-radius: 26px;
-  background:
-    radial-gradient(circle at 35% 38%, rgba(240, 200, 110, 0.75), transparent 36%),
-    radial-gradient(circle at 68% 30%, rgba(210, 155, 70, 0.60), transparent 32%),
-    radial-gradient(circle at 22% 72%, rgba(245, 240, 220, 0.50), transparent 30%),
-    radial-gradient(circle at 75% 70%, rgba(100, 140, 70, 0.38), transparent 32%),
-    radial-gradient(circle at 52% 55%, rgba(180, 110, 45, 0.50), transparent 42%),
-    linear-gradient(160deg, #2C1A0E 0%, #5C3317 22%, #8B5E2A 44%, #C4923E 66%, #E8BC68 84%, #D4A84B 100%);
+  background-image: url('chicken-teishoku.png');
+  background-size: cover;
+  background-position: 50% 45%;
   box-shadow:
-    inset 0 -60px 80px rgba(20, 10, 5, 0.55),
-    inset 0 20px 50px rgba(220, 180, 80, 0.10),
     inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-    0 18px 40px -10px rgba(120, 70, 20, 0.28);
+    0 18px 40px -10px rgba(10, 10, 10, 0.20);
   overflow: hidden;
   z-index: 1;
-}
-.screen-home .food-photo::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 22% 16%, rgba(255, 255, 255, 0.65), transparent 38%),
-    radial-gradient(circle at 78% 80%, rgba(255, 140, 40, 0.25), transparent 36%);
-  z-index: 3;
 }
 .screen-home .food-photo-tag {
   position: absolute;
@@ -834,9 +835,9 @@ nav .inner {
   height: 100%;
   border-radius: 999px;
 }
-.pfc-fill.pfc-p { background: linear-gradient(90deg, #3B82F6, #60A5FA); }
-.pfc-fill.pfc-f { background: linear-gradient(90deg, #F59E0B, #FBBF24); }
-.pfc-fill.pfc-c { background: linear-gradient(90deg, #10B981, #34D399); }
+.pfc-fill.pfc-p { background: linear-gradient(90deg, var(--accent-dark), var(--accent)); }
+.pfc-fill.pfc-f { background: linear-gradient(90deg, var(--accent), #FF9966); }
+.pfc-fill.pfc-c { background: linear-gradient(90deg, #FF9966, #FFB88C); }
 .pfc-value {
   width: 24px;
   text-align: right;
@@ -1582,6 +1583,222 @@ footer {
 .fade-in:nth-child(2) { animation-delay: 0.15s; }
 .fade-in:nth-child(3) { animation-delay: 0.25s; }
 
+/* =================================================================
+   Tier 2: Mockup Build 23 寄せ (PFC grid / Budget wallet+trend / Goal chart+streak)
+   ================================================================= */
+
+/* -------- 中央 phone PFC 2x2 glass grid -------- */
+.screen-home .pfc-grid {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 18px;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 20px 48px -10px rgba(10, 10, 10, 0.22),
+    0 0 0 1px rgba(10, 10, 10, 0.04);
+  z-index: 11;
+}
+.pfc-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--accent-tint-08);
+}
+.pfc-cell-ring {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+}
+.pfc-cell-ring::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #fff;
+}
+.pfc-cell-label {
+  font-family: var(--font-display);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+.pfc-cell-value {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+.pfc-cell-value i {
+  font-size: 8px;
+  font-style: normal;
+  color: var(--text-tertiary);
+  margin-left: 1px;
+  font-weight: 700;
+}
+
+/* PFC modifier — iOS app 整合 (P=blue / F=amber / C=green / cost=orange) */
+.pfc-cell-p { border-color: var(--pfc-p-tint); }
+.pfc-cell-p .pfc-cell-ring { background: conic-gradient(var(--pfc-p) calc(var(--p) * 1%), var(--pfc-p-tint) 0); }
+.pfc-cell-p .pfc-cell-label { color: var(--pfc-p); }
+
+.pfc-cell-f { border-color: var(--pfc-f-tint); }
+.pfc-cell-f .pfc-cell-ring { background: conic-gradient(var(--pfc-f) calc(var(--p) * 1%), var(--pfc-f-tint) 0); }
+.pfc-cell-f .pfc-cell-label { color: var(--pfc-f); }
+
+.pfc-cell-c { border-color: var(--pfc-c-tint); }
+.pfc-cell-c .pfc-cell-ring { background: conic-gradient(var(--pfc-c) calc(var(--p) * 1%), var(--pfc-c-tint) 0); }
+.pfc-cell-c .pfc-cell-label { color: var(--pfc-c); }
+
+.pfc-cell-cost {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), rgba(255, 255, 255, 0.85));
+}
+.pfc-cell-cost .pfc-cell-label { color: var(--accent-dark); }
+
+/* -------- 左 phone Budget wallet icon + trend -------- */
+.screen-title-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.wallet-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.screen-budget .budget-meta {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+.screen-budget .budget-meta .meta-cell {
+  padding: 7px 4px;
+}
+.screen-budget .budget-meta .meta-value {
+  font-size: 11px;
+}
+.budget-trend {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: rgba(245, 245, 245, 0.6);
+  border: 1px solid rgba(10, 10, 10, 0.06);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.trend-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 8.5px;
+}
+.trend-day {
+  width: 14px;
+  color: var(--text-tertiary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.trend-bar {
+  flex: 1;
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), #FF8C5A);
+  width: var(--h);
+  box-shadow: none;
+}
+.trend-val {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--text-primary);
+  font-size: 9px;
+  flex-shrink: 0;
+}
+
+/* -------- 右 phone Goal weight chart + streak -------- */
+.weight-chart {
+  position: relative;
+  height: 38px;
+  margin: 8px 0 6px;
+  padding: 4px 8px;
+  background: rgba(245, 245, 245, 0.6);
+  border-radius: 10px;
+  border: 1px solid rgba(10, 10, 10, 0.06);
+}
+.weight-chart svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.chart-label {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  font-family: var(--font-display);
+  font-size: 7px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.streak-row {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 8px;
+  padding: 8px 4px;
+  background: rgba(245, 245, 245, 0.5);
+  border-radius: 10px;
+  border: 1px solid rgba(10, 10, 10, 0.06);
+  margin-top: 8px;
+}
+.streak-cell {
+  text-align: center;
+}
+.streak-num {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.streak-num.accent {
+  color: var(--pfc-c);
+}
+.streak-num span {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  margin-left: 1px;
+}
+.streak-label {
+  font-family: var(--font-display);
+  font-size: 7.5px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.streak-divider {
+  background: rgba(10, 10, 10, 0.06);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -1800,6 +2017,40 @@ footer {
 
   footer { padding: 56px 24px 40px; }
   .footer-links { gap: 24px; }
+
+  /* Tier 2 — mobile breakpoint */
+  .screen-home .pfc-grid {
+    bottom: 8px;
+    padding: 7px;
+    gap: 4px;
+    border-radius: 14px;
+  }
+  .pfc-cell {
+    padding: 4px 6px;
+    gap: 4px;
+  }
+  .pfc-cell-ring {
+    width: 14px;
+    height: 14px;
+  }
+  .pfc-cell-ring::before {
+    inset: 2.5px;
+  }
+  .pfc-cell-label { font-size: 7px; }
+  .pfc-cell-value { font-size: 9px; }
+  .pfc-cell-value i { font-size: 6.5px; }
+  .wallet-icon { width: 11px; height: 11px; }
+  .screen-budget .budget-meta .meta-value { font-size: 9px; }
+  .budget-trend { padding: 5px 7px; gap: 3px; }
+  .trend-row { font-size: 6.5px; gap: 4px; }
+  .trend-bar { height: 4px; }
+  .trend-val { font-size: 7px; }
+  .weight-chart { height: 28px; margin: 5px 0 4px; }
+  .chart-label { font-size: 6px; }
+  .streak-row { padding: 6px 3px; gap: 5px; margin-top: 5px; }
+  .streak-num { font-size: 12px; }
+  .streak-num span { font-size: 7px; }
+  .streak-label { font-size: 6px; }
 }
 
 @media (max-width: 380px) {
