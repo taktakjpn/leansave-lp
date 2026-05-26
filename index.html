@@ -30,15 +30,24 @@
 <nav>
   <div class="inner">
     <a href="index.html" class="nav-logo"><img src="logo.png" alt="LeanSave" class="nav-logo-img"><span class="leansave-logo">LEANSAVE</span></a>
-    <a href="support.html" class="nav-cta">お問い合わせ</a>
+    <a href="https://apps.apple.com/jp/app/leansave/id6763870418?utm_source=leansave_lp&utm_medium=web&utm_campaign=launch_2026q2&utm_content=nav_cta" class="nav-cta" data-cta="nav_appstore">App Store で入手</a>
   </div>
 </nav>
 
 <!-- Hero -->
 <section class="hero">
-  <div class="hero-eyebrow">Launching April 2026</div>
+  <div class="hero-eyebrow">App Store で配信中</div>
   <h1>身体も、食費も、<br><span class="hero-title-gradient">ひとつのアプリで。</span></h1>
   <p class="hero-sub">写真を1枚撮るだけ。AIがカロリー・PFC・食費を5秒で自動計算。</p>
+
+  <div class="hero-dl-wrap">
+    <a href="https://apps.apple.com/jp/app/leansave/id6763870418?utm_source=leansave_lp&utm_medium=web&utm_campaign=launch_2026q2&utm_content=hero_cta"
+       class="hero-dl-link hero-dl-link-text"
+       data-cta="hero_appstore"
+       aria-label="App Storeで LeanSave をダウンロード">
+      App Storeでダウンロード
+    </a>
+  </div>
 
   <div class="mockup-wrap">
     <div class="mockup-3d-scene">
@@ -242,12 +251,23 @@
 <!-- CTA -->
 <section class="cta-section">
   <h2>食べる、貯める、<br>整える。</h2>
-  <a href="support.html" class="btn-dark-cta">お問い合わせ</a>
+  <a href="https://apps.apple.com/jp/app/leansave/id6763870418?utm_source=leansave_lp&utm_medium=web&utm_campaign=launch_2026q2&utm_content=cta_section_button"
+     class="btn-dark-cta"
+     data-cta="cta_appstore">App Storeでダウンロード</a>
+  <p class="cta-sub-link">質問・要望は <a href="support.html">お問い合わせ</a> からどうぞ</p>
 </section>
 
 <!-- Footer -->
 <footer>
   <div class="footer-logo"><img src="logo.png" alt="LeanSave" class="footer-logo-img"><span class="leansave-logo">LEANSAVE</span></div>
+  <div class="footer-dl-wrap">
+    <a href="https://apps.apple.com/jp/app/leansave/id6763870418?utm_source=leansave_lp&utm_medium=web&utm_campaign=launch_2026q2&utm_content=footer"
+       class="footer-dl-link footer-dl-link-text"
+       data-cta="footer_appstore"
+       aria-label="App Storeで LeanSave をダウンロード">
+      App Store で入手
+    </a>
+  </div>
   <div class="footer-links">
     <a href="terms.html">利用規約</a>
     <a href="privacy.html">プライバシーポリシー</a>
@@ -258,20 +278,6 @@
 </footer>
 
 <script>
-function handleRegister(e) {
-  if (e) e.preventDefault();
-  const input = e && e.target ? e.target.querySelector('input[type="email"]') : document.getElementById('email-input');
-  const email = input.value.trim();
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    alert('有効なメールアドレスを入力してください。');
-    input.focus();
-    return;
-  }
-  alert('事前登録ありがとうございます。ローンチ時にご連絡します。');
-  input.value = '';
-}
-
 // Intersection Observer for fade-in
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
