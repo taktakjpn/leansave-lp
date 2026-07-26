@@ -38,7 +38,7 @@
 <section class="hero">
   <div class="hero-eyebrow">App Store で配信中</div>
   <h1>身体も、食費も、<br><span class="hero-title-gradient">ひとつのアプリで。</span></h1>
-  <p class="hero-sub">写真を1枚撮るだけ。AIがカロリー・PFC・食費を5秒で自動計算。</p>
+  <p class="hero-sub">写真1枚で、カロリー・PFCはAIが推定。食費を足せば、1回の記録で両方そろう。</p>
 
   <div class="hero-dl-wrap">
     <a href="https://apps.apple.com/jp/app/leansave/id6763870418?utm_source=leansave_lp&utm_medium=web&utm_campaign=launch_2026q2&utm_content=hero_cta"
@@ -67,7 +67,7 @@
                   <path d="M3 7.5C3 6.12 4.12 5 5.5 5h13A2.5 2.5 0 0 1 21 7.5v9A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-9Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
                   <path d="M3 10h18M16 13.5h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
                 </svg>
-                <div class="screen-title">今月の食費</div>
+                <div class="screen-title">30日間の食費</div>
               </div>
               <div class="screen-chip chip-ok">予算内</div>
             </div>
@@ -80,16 +80,16 @@
             </div>
             <div class="budget-meta">
               <div class="meta-cell">
-                <div class="meta-value">¥17,600</div>
-                <div class="meta-label">残り予算</div>
+                <div class="meta-value">¥23,250</div>
+                <div class="meta-label">月間予測</div>
               </div>
               <div class="meta-cell">
-                <div class="meta-value">18日</div>
-                <div class="meta-label">残り日数</div>
+                <div class="meta-value">16日</div>
+                <div class="meta-label">記録日</div>
               </div>
               <div class="meta-cell">
-                <div class="meta-value">¥978</div>
-                <div class="meta-label">1日あたり</div>
+                <div class="meta-value">¥775</div>
+                <div class="meta-label">平均</div>
               </div>
             </div>
             <div class="budget-trend">
@@ -116,7 +116,6 @@
             </div>
             <div class="food-photo" aria-hidden="true">
               <div class="scan-line"></div>
-              <div class="food-photo-tag">¥780</div>
             </div>
             <div class="food-name">チキン定食</div>
             <div class="food-calories">
@@ -140,7 +139,7 @@
                 <div class="pfc-cell-ring" style="--p:82"></div>
                 <span class="pfc-cell-value">72<i>g</i></span>
               </div>
-              <div class="pfc-cell pfc-cell-cost">
+              <div class="pfc-cell pfc-cell-cost pfc-cell-input">
                 <span class="pfc-cell-label">食費</span>
                 <span class="pfc-cell-value">¥780</span>
               </div>
@@ -160,12 +159,11 @@
           <div class="mockup-screen screen-goal">
             <div class="screen-header">
               <div class="screen-title">身体の目標</div>
-              <div class="screen-chip chip-progress">−4.0kg</div>
             </div>
-            <div class="goal-ring" role="img" aria-label="目標達成率 40%">
+            <div class="goal-ring" role="img" aria-label="目標まで 6.0kg">
               <div class="goal-ring-inner">
-                <div class="goal-ring-num">40<span>%</span></div>
-                <div class="goal-ring-sub">達成</div>
+                <div class="goal-ring-num">6.0<span>kg</span></div>
+                <div class="goal-ring-sub">目標まで</div>
               </div>
             </div>
             <div class="goal-weights">
@@ -208,6 +206,7 @@
 
     </div>
     </div>
+    <p class="mockup-note">※ 画面・数値はイメージです。食費は手入力です</p>
   </div>
 </section>
 
@@ -224,7 +223,8 @@
         <div class="feature-num">01</div>
         <div class="feature-body">
           <h3>写真1枚で、記録完了。</h3>
-          <p>食事の写真を撮るだけ。AIが料理名を識別し、カロリー・PFC・食費を5秒で自動計算する。手入力はゼロ。面倒だから続かない、を終わらせる。</p>
+          <p>食事の写真を撮るだけ。AIが料理名を読み取り、カロリー・PFC・重量を推定する。写真がなければ、料理名を入力するだけでもいい。記録にかかる手数を、できるだけ減らした。</p>
+          <p class="feature-note">※ 写真解析は無料プランで1日5回まで</p>
         </div>
       </div>
 
@@ -232,15 +232,16 @@
         <div class="feature-num">02</div>
         <div class="feature-body">
           <h3>栄養と食費を、同時に。</h3>
-          <p>これまでは家計簿アプリと栄養管理アプリを別々に使う必要があった。LeanSaveなら写真1枚で両方を同時に記録できる。2つのアプリを行き来する時間は、もう要らない。</p>
+          <p>栄養は栄養で、食費は食費で。別々に記録していると、同じ食事を2回入力することになる。LeanSaveなら、1回の記録に栄養と食費の両方が残る。</p>
         </div>
       </div>
 
       <div class="feature-row">
         <div class="feature-num">03</div>
         <div class="feature-body">
-          <h3>5秒で記録、だから続く。</h3>
-          <p>三日坊主にならないシンプル設計。自炊もコンビニ飯も外食も、すべてワンタップで記録。月次レポートで振り返り、自然と健康と家計の両方が整う。</p>
+          <h3>続けた分だけ、見えてくる。</h3>
+          <p>続けるための、シンプルな設計。記録した日は連続日数として積み上がる。体重・カロリー・食費はグラフで振り返れる。記録した分から今月の食費を予測し、予算と並べて表示する。</p>
+          <p class="feature-note">※ 30日・90日表示、AI解析無制限はPro機能です</p>
         </div>
       </div>
 
@@ -250,11 +251,10 @@
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2>食べる、貯める、<br>整える。</h2>
+  <h2>食べる、見える、<br>整える。</h2>
   <a href="https://apps.apple.com/jp/app/leansave/id6763870418?utm_source=leansave_lp&utm_medium=web&utm_campaign=launch_2026q2&utm_content=cta_section_button"
      class="btn-dark-cta"
      data-cta="cta_appstore">App Storeでダウンロード</a>
-  <p class="cta-sub-link">質問・要望は <a href="support.html">お問い合わせ</a> からどうぞ</p>
 </section>
 
 <!-- Footer -->
@@ -274,6 +274,7 @@
     <a href="legal.html">特定商取引法に基づく表記</a>
     <a href="support.html">お問い合わせ</a>
   </div>
+  <p class="footer-note">LeanSave Proは自動更新の有料サブスクリプションです。価格・解約条件はApp Storeおよび<a href="legal.html">特定商取引法に基づく表記</a>をご確認ください。</p>
   <div class="footer-copy">© 2026 LeanSave. All rights reserved.</div>
 </footer>
 

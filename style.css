@@ -288,6 +288,18 @@ nav .inner {
   filter: blur(24px);
   pointer-events: none;
 }
+/* モック画面がサンプルであることの注記。図の近くに置く */
+.mockup-note {
+  position: relative;
+  z-index: 2;
+  margin: 40px auto 0;
+  max-width: 640px;
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  text-align: center;
+}
 
 /* 3D Scene */
 .mockup-3d-scene {
@@ -944,7 +956,7 @@ nav .inner {
 .goal-ring {
   width: 112px; height: 112px;
   border-radius: 50%;
-  background: conic-gradient(var(--accent) 0% 40%, var(--surface-2) 40% 100%);
+  background: var(--surface-2);
   margin: 6px auto 14px;
   position: relative;
   box-shadow: 0 6px 22px -6px rgba(255, 107, 53, 0.38);
@@ -957,7 +969,7 @@ nav .inner {
   margin: 0;
   width: 116px;
   height: 116px;
-  background: conic-gradient(var(--accent) 0% 40%, var(--surface-2) 40% 100%);
+  background: var(--surface-2);
   box-shadow:
     0 20px 48px -6px rgba(255, 107, 53, 0.48),
     0 8px 22px rgba(10, 10, 10, 0.18),
@@ -1188,6 +1200,16 @@ section { padding: 160px 32px; position: relative; }
   color: var(--text-secondary);
   max-width: 640px;
 }
+/* 料金・提供条件の注記。本文より小さくしない（可読性を落とさないため） */
+.feature-note {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin-top: 16px;
+  padding-left: 14px;
+  border-left: 3px solid var(--border-strong);
+}
 
 /* ==========================================================================
    CTA Section — dark
@@ -1312,6 +1334,18 @@ footer {
   color: #fff;
   opacity: 1;
 }
+.footer-note {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 680px;
+  margin: 0 auto 24px;
+}
+.footer-note a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: underline;
+}
+.footer-note a:hover { color: #fff; }
 .footer-copy {
   font-size: 11px;
   color: rgba(255, 255, 255, 0.32);
@@ -1669,6 +1703,11 @@ footer {
   background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), rgba(255, 255, 255, 0.85));
 }
 .pfc-cell-cost .pfc-cell-label { color: var(--accent-dark); }
+/* 食費はユーザーが入力する値。AI が推定する P / F / C と視覚的に区別する */
+.pfc-cell-input {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px dashed var(--border-strong);
+}
 
 /* -------- 左 phone Budget wallet icon + trend -------- */
 .screen-title-row {
@@ -1885,6 +1924,11 @@ footer {
   .budget-day { padding: 5px 7px; border-radius: 7px; }
   .budget-day-label { font-size: 7px; }
   .budget-day-value { font-size: 10px; }
+  /* 狭幅では内容幅が不足するため、GOAL 画面と同じ 8px に揃える */
+  .screen-budget {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   /* 飛び出し要素のモバイル調整 */
   .screen-budget .budget-hero {
     top: 30%;
@@ -1900,7 +1944,11 @@ footer {
     right: 8px;
     height: 6px;
   }
-  .screen-budget .budget-meta { margin-top: auto; margin-bottom: 6px; }
+  .screen-budget .budget-meta { margin-top: auto; margin-bottom: 6px; gap: 2px; }
+  /* 狭幅でラベル・タイトルが縦に潰れるのを防ぐ */
+  .screen-budget .screen-title,
+  .screen-budget .screen-chip,
+  .screen-budget .meta-label { white-space: nowrap; }
 
   /* Screen 2 */
   .ai-badge { font-size: 7px; padding: 3px 7px; margin-bottom: 7px; }
@@ -1977,7 +2025,10 @@ footer {
       0 4px 10px rgba(10, 10, 10, 0.14);
   }
   .screen-goal .goal-ring::before { inset: 5px; }
-  .screen-goal .goal-weights { margin-top: 42px; }
+  /* リングが右上に飛び出すため、タイトル側に逃げ幅を確保する */
+  .screen-goal .screen-header { padding-right: 44px; }
+  .screen-goal .screen-title { font-size: 7px; white-space: nowrap; }
+  .screen-goal .goal-weights { margin-top: 22px; }
   .screen-goal .goal-cal { margin-top: 6px; }
   .goal-weights { gap: 3px; margin-bottom: 6px; }
   .weight-cell { padding: 4px 2px; border-radius: 6px; }
@@ -2045,9 +2096,10 @@ footer {
   .trend-row { font-size: 6.5px; gap: 4px; }
   .trend-bar { height: 4px; }
   .trend-val { font-size: 7px; }
-  .weight-chart { height: 28px; margin: 5px 0 4px; }
-  .chart-label { font-size: 6px; }
+  .weight-chart { height: 38px; margin: 6px 0 5px; padding: 4px 10px 4px 8px; }
+  .chart-label { font-size: 6px; top: auto; bottom: 3px; left: 8px; right: auto; }
   .streak-row { padding: 6px 3px; gap: 5px; margin-top: 5px; }
+  .screen-goal .streak-row { margin-top: 12px; margin-bottom: 7px; }
   .streak-num { font-size: 12px; }
   .streak-num span { font-size: 7px; }
   .streak-label { font-size: 6px; }
